@@ -36,7 +36,7 @@ class _ClientAccountState extends State<ClientAccount> {
       appBar: navBar(),
       body: BlocBuilder<ClientControl, ClientState>(builder: (context, state) {
         if (state is ListClient) {
-          return SelfAccount(state.acount);
+          return selfAccount(state.acount);
         } else {
           return const CircularProgressIndicator();
         }
@@ -44,7 +44,7 @@ class _ClientAccountState extends State<ClientAccount> {
     );
   }
 
-  Widget SelfAccount(List<Client> c) {
+  selfAccount(List<Client> c) {
     var client = c[0];
     usernameText.text = client.username;
     firstnameText.text = client.firstname.toString();
@@ -54,7 +54,6 @@ class _ClientAccountState extends State<ClientAccount> {
     emailText.text = client.email.toString();
     noticeText.text = client.notice.toString();
 
-    debug_print("client: $c");
     return Padding(
       padding: const EdgeInsets.fromLTRB(30, 0, 50, 0),
       child: SingleChildScrollView(

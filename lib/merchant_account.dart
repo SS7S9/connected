@@ -1,15 +1,8 @@
 // sucess edit and delete
 import 'package:data_connected/models/Merchant.dart';
-import 'package:data_connected/staff_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:data_connected/util.dart';
 
 import 'constants.dart';
-import 'control/controled.dart';
-import 'staff_data_show.dart';
 
 class MerchantAccount extends StatefulWidget {
   final List<Merchant> merchant;

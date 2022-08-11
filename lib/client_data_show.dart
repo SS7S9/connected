@@ -17,7 +17,7 @@ class _ClientDataShowState extends State<ClientDataShow> {
       body: Center(
         child: BlocProvider(
           create: (context) => (ClientControl())..getStaffs(),
-          child: ClientAccount(),
+          child: const ClientAccount(),
         ),
       ),
     );

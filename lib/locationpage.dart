@@ -38,11 +38,8 @@ class _LocationpageState extends State<Locationpage> {
     if (distance < 0.035 && distance > -0.35) {
       debug_print("arrived and get the order in queue!");
     } else {
-      debug_print("not arrived");
       showAlert(context, "NOTICE");
     }
-
-    debug_print("distance: ${distance}");
   }
 
   Future<void> _updatePosition() async {

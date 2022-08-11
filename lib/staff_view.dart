@@ -132,7 +132,7 @@ class _StaffViewState extends State<StaffView> {
                 "Merchant Dashboard",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
               ),
-              Spacer(),
+              const Spacer(),
               const Text(
                 "1",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
@@ -360,7 +360,6 @@ class _StaffViewState extends State<StaffView> {
   inputValues(BuildContext context, String s, StateSetter setState) {
     var control;
     var inputType;
-    debug_print("string: $s");
     if (s == "username") {
       inputType = TextInputType.text;
       control = usernameTextController;
@@ -398,7 +397,7 @@ class _StaffViewState extends State<StaffView> {
                           keyboardType: inputType,
                           maxLength: 10,
                           controller: control,
-                          textAlign: TextAlign.start,  
+                          textAlign: TextAlign.start,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
                             counterText: '',
@@ -424,7 +423,6 @@ class _StaffViewState extends State<StaffView> {
         setState(() {
           permission = newValue.toString();
         });
-        //debug_print("*pp* $permission");
       },
       value: permission,
       icon: const Icon(Icons.arrow_downward),

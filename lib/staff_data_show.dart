@@ -1,8 +1,6 @@
-import 'package:data_connected/client_account.dart';
 import 'package:data_connected/control/controled.dart';
 import 'package:data_connected/staff_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,10 +17,8 @@ class _StaffDataShowState extends State<StaffDataShow> {
     return Scaffold(
       body: Center(
         child: BlocProvider(
-          create: (context) => (Controled())
-            ..getStaffs()
-            ..observeStaff(),
-          child: StaffView(),
+          create: (context) => (Controled())..getStaffs()..observeStaff(),
+          child: const StaffView(),
         ),
       ),
     );

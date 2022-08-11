@@ -42,9 +42,6 @@ class _StaffDetailState extends State<StaffDetail> {
   @override
   void initState() {
     super.initState();
-    debug_print("details : ${widget.username.toString()}");
-    debug_print("details***** : ${widget.merchant[widget.indext].toString()}");
-
     usernameTextController.text = widget.username.toString();
     passwordTextController.text =
         confirmTextController.text = widget.password.toString();
@@ -104,7 +101,7 @@ class _StaffDetailState extends State<StaffDetail> {
     );
   }
 
-  ElevatedButton btn_edde(BuildContext context, String s) {
+  btn_edde(BuildContext context, String s) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         primary: s == "delete" ? greenColor : yellowColor,
@@ -211,7 +208,7 @@ class _StaffDetailState extends State<StaffDetail> {
                           controller: control,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
-                          ),  
+                          ),
                           //onChanged: (text) => {updateStaff()},
                         ),
                       ),
@@ -238,7 +235,6 @@ class _StaffDetailState extends State<StaffDetail> {
         setState(() {
           permission = newValue.toString();
         });
-        debug_print("*pp* $permission");
       },
       value: permission,
       icon: const Icon(Icons.arrow_downward),
