@@ -1,0 +1,57 @@
+type Staff @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  username: String
+  isIt: Boolean
+}
+
+type Booking @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  bookingName: String!
+  bookingTime: String!
+  status: String!
+  reference: String
+}
+
+type Chat @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  chatTime: AWSDateTime
+  content: String!
+}
+
+type Client @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  username: String!
+  firstname: String
+  lastname: String
+  passowrd: String
+  mobile: String
+  email: AWSEmail
+  notice: String
+}
+
+type SMS @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  smsContent: String!
+}
+
+type Merchant @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  username: String
+  companyname: String
+  password: String
+  address: String
+  postalAddress: String
+  email: AWSEmail
+  ABNnumber: Int
+  ABNstatus: String
+  permission: String
+  addressLatitude: String
+  addressLongtitude: String
+  startTime: String
+}
+
+type Post @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String
+  isComplete: Boolean
+} 
